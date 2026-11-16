@@ -69,7 +69,7 @@
 
     .page-container {
       width: 100%;
-      max-width: 1050px;
+      max-width: 1000px;
     }
 
     .sheet-card {
@@ -105,7 +105,7 @@
       pointer-events: none;
     }
 
-    /* Switch de Modo Estilo Pastilla (Sin texto) */
+    /* Switch de Modo Estilo Pastilla */
     .switch-container {
       display: flex;
       justify-content: flex-end;
@@ -207,10 +207,10 @@
       margin-top: 4px;
     }
 
-    /* Grid System de 3 Columnas */
+    /* GRID DE 2 COLUMNAS ESTRICTAS */
     .content-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
       position: relative;
       z-index: 1;
@@ -236,30 +236,17 @@
       margin-bottom: 12px;
     }
     
-    /* Subtítulo superior pequeño */
-    .category-sub {
-      font-family: 'Bona Nova SC', serif;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      display: block;
-      margin-bottom: 2px;
-      text-transform: uppercase;
-    }
-    .color-teal { color: #2E7870; }
-    .color-pink { color: #BF47B1; }
-
-    /* Título principal grande con viñeta */
+    /* Título principal superior con su punto indicador */
     .category-title {
       font-family: 'Montserrat', sans-serif;
       font-size: 13px;
       font-weight: 700;
-      color: var(--text-main);
       letter-spacing: 0.5px;
       display: flex;
       align-items: center;
       gap: 8px;
       text-transform: uppercase;
+      margin-bottom: 2px;
     }
     .dot {
       width: 6px;
@@ -269,6 +256,18 @@
     }
     .dot.teal { background-color: #2E7870; }
     .dot.pink { background-color: #BF47B1; }
+
+    /* Subtítulo inferior */
+    .category-sub {
+      font-family: 'Bona Nova SC', serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      display: block;
+      text-transform: uppercase;
+    }
+    .color-teal { color: #2E7870; }
+    .color-pink { color: #BF47B1; }
 
     /* Lista de Precios y Dot Leaders */
     .price-list {
@@ -374,7 +373,7 @@
       margin-top: 20px;
     }
 
-    /* Responsive */
+    /* RESPONSIVE: 1 COLUMNA EN MÓVIL */
     @media (max-width: 850px) {
       .content-grid {
         grid-template-columns: 1fr;
@@ -416,15 +415,15 @@
         <p class="subtitle">Excelencia Técnica • Calidad y Buen Servicio</p>
       </header>
 
-      <!-- GRID DE 3 COLUMNAS -->
+      <!-- GRID DE 2 COLUMNAS -->
       <div class="content-grid">
 
-        <!-- COLUMNA 1 -->
+        <!-- ================= COLUMNA IZQUIERDA ================= -->
         <div class="column">
           <!-- 1. PROTECCIÓN Y BALANCE (Verde Teal #2E7870) -->
           <section class="price-box">
             <div class="box-header">
-              <h3 class="category-title"><span class="dot teal"></span> Protección y Balance</h3>
+              <h3 class="category-title color-teal"><span class="dot teal"></span> Protección y Balance</h3>
               <span class="category-sub color-teal">Biomecánico</span>
             </div>
             <ul class="price-list">
@@ -440,7 +439,7 @@
           <!-- 2. ESTRUCTURAS (Rosado Pink #BF47B1) -->
           <section class="price-box">
             <div class="box-header">
-              <h3 class="category-title"><span class="dot pink"></span> Estructuras</h3>
+              <h3 class="category-title color-pink"><span class="dot pink"></span> Estructuras</h3>
               <span class="category-sub color-pink">De Precisión</span>
             </div>
             <ul class="price-list">
@@ -454,7 +453,7 @@
           <!-- 3. FLEXIBILIDAD Y CONFORT (Verde Teal #2E7870) -->
           <section class="price-box">
             <div class="box-header">
-              <h3 class="category-title"><span class="dot teal"></span> Flexibilidad</h3>
+              <h3 class="category-title color-teal"><span class="dot teal"></span> Flexibilidad</h3>
               <span class="category-sub color-teal">Y Confort</span>
             </div>
             <ul class="price-list">
@@ -468,7 +467,7 @@
           <!-- 4. FLUJO DIGITAL (Rosado Pink #BF47B1) -->
           <section class="price-box">
             <div class="box-header">
-              <h3 class="category-title"><span class="dot pink"></span> Flujo Digital</h3>
+              <h3 class="category-title color-pink"><span class="dot pink"></span> Flujo Digital</h3>
               <span class="category-sub color-pink">Impresiones 3D</span>
             </div>
             <ul class="price-list">
@@ -483,8 +482,8 @@
           <!-- 5. REHABILITACIÓN (Verde Teal #2E7870) -->
           <section class="price-box">
             <div class="box-header">
-              <h3 class="category-title"><span class="dot teal"></span> Rehabilitación</h3>
-              <span class="category-sub color-teal">Protésica</span>
+              <h3 class="category-title color-teal"><span class="dot teal"></span> Rehabilitación</h3>
+              <span class="category-sub color-teal">Progresiva</span>
             </div>
             <ul class="price-list">
               <li><span class="item-name">Cubeta individual</span><span class="leader"></span><span class="price">25$</span></li>
@@ -499,63 +498,55 @@
           </section>
         </div>
 
-        <!-- COLUMNA 2 (Derecha) -->
-        <div class="column" style="grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-          
-          <!-- Subcolumna Izquierda (Aparatología) -->
-          <div style="display: flex; flex-direction: column; gap: 20px;">
-            <!-- 6. APARATOLOGÍA (Rosado Pink #BF47B1) -->
-            <section class="price-box">
-              <div class="box-header">
-                <h3 class="category-title"><span class="dot pink"></span> Aparatología</h3>
-                <span class="category-sub color-pink">Fija y Removible</span>
-              </div>
-              <ul class="price-list">
-                <li><span class="item-name">Retenedor tipo Hawley</span><span class="leader"></span><span class="price">35$</span></li>
-                <li><span class="item-name">Retenedor circunferencial</span><span class="leader"></span><span class="price">40$</span></li>
-                <li><span class="item-name">Placa de Schwartz</span><span class="leader"></span><span class="price">55$</span></li>
-                <li><span class="item-name">Quad-Helix</span><span class="leader"></span><span class="price">55$</span></li>
-                <li><span class="item-name">Bi-Helix</span><span class="leader"></span><span class="price">55$</span></li>
-                <li><span class="item-name">Disyuntor Hyrax soldado a bandas</span><span class="leader"></span><span class="price">90$</span></li>
-                <li><span class="item-name">McNamara</span><span class="leader"></span><span class="price">90$</span></li>
-                <li><span class="item-name">Plato Junior</span><span class="leader"></span><span class="price">30$</span></li>
-                <li><span class="item-name">Plano Anterior mordida (bandas)</span><span class="leader"></span><span class="price">35$</span></li>
-                <li><span class="item-name">Mantenedor de espacio banda-asa</span><span class="leader"></span><span class="price">30$</span></li>
-                <li><span class="item-name">Rejilla para hábito</span><span class="leader"></span><span class="price">30$</span></li>
-                <li><span class="item-name">Arco lingual</span><span class="leader"></span><span class="price">30$</span></li>
-                <li><span class="item-name">Arco traspalatino</span><span class="leader"></span><span class="price">30$</span></li>
-                <li><span class="item-name">Lip Bumper</span><span class="leader"></span><span class="price">40$</span></li>
-                <li><span class="item-name">Desoclusor acrílico</span><span class="leader"></span><span class="price">30$</span></li>
-                <li><span class="item-name">Pistas planas</span><span class="leader"></span><span class="price">120$</span></li>
-                <li><span class="item-name">Aditamentos adicionales</span><span class="leader"></span><span class="price">10$</span></li>
-              </ul>
-            </section>
-          </div>
-
-          <!-- Subcolumna Derecha (Otros Servicios + Imagen) -->
-          <div style="display: flex; flex-direction: column; gap: 20px;">
-            <!-- 7. OTROS SERVICIOS (Verde Teal #2E7870) -->
-            <section class="price-box">
-              <div class="box-header">
-                <h3 class="category-title"><span class="dot teal"></span> Otros Servicios</h3>
-                <span class="category-sub color-teal">Servicios de Laboratorio</span>
-              </div>
-              <ul class="price-list">
-                <li><span class="item-name">Reparación acrílica</span><span class="leader"></span><span class="price">20$</span></li>
-                <li><span class="item-name">Vaciado de impresión</span><span class="leader"></span><span class="price">5$</span></li>
-                <li><span class="item-name">Duplicado de modelo</span><span class="leader"></span><span class="price">5$</span></li>
-                <li><span class="item-name">Encerado diagnóstico por unidad</span><span class="leader"></span><span class="price">10$</span></li>
-                <li><span class="item-name">Matriz de silicona para MockUp</span><span class="leader"></span><span class="price">20$</span></li>
-                <li><span class="item-name">Modelo Geller de yeso</span><span class="leader"></span><span class="price">20$</span></li>
-              </ul>
-            </section>
-
-            <!-- IMAGEN DE LA APARATOLOGÍA -->
-            <div class="image-box">
-              <img src="./images/v4086_17306.png" alt="Aparatología Dental" />
+        <!-- ================= COLUMNA DERECHA ================= -->
+        <div class="column">
+          <!-- 6. APARATOLOGÍA (Rosado Pink #BF47B1) -->
+          <section class="price-box">
+            <div class="box-header">
+              <h3 class="category-title color-pink"><span class="dot pink"></span> Aparatología</h3>
+              <span class="category-sub color-pink">Fija y Removible</span>
             </div>
-          </div>
+            <ul class="price-list">
+              <li><span class="item-name">Retenedor tipo Hawley</span><span class="leader"></span><span class="price">35$</span></li>
+              <li><span class="item-name">Retenedor circunferencial</span><span class="leader"></span><span class="price">40$</span></li>
+              <li><span class="item-name">Placa de Schwartz</span><span class="leader"></span><span class="price">55$</span></li>
+              <li><span class="item-name">Quad-Helix</span><span class="leader"></span><span class="price">55$</span></li>
+              <li><span class="item-name">Bi-Helix</span><span class="leader"></span><span class="price">55$</span></li>
+              <li><span class="item-name">Disyuntor Hyrax soldado a bandas</span><span class="leader"></span><span class="price">90$</span></li>
+              <li><span class="item-name">McNamara</span><span class="leader"></span><span class="price">90$</span></li>
+              <li><span class="item-name">Plato Junior</span><span class="leader"></span><span class="price">30$</span></li>
+              <li><span class="item-name">Plano Anterior mordida (bandas)</span><span class="leader"></span><span class="price">35$</span></li>
+              <li><span class="item-name">Mantenedor de espacio banda-asa</span><span class="leader"></span><span class="price">30$</span></li>
+              <li><span class="item-name">Rejilla para hábito</span><span class="leader"></span><span class="price">30$</span></li>
+              <li><span class="item-name">Arco lingual</span><span class="leader"></span><span class="price">30$</span></li>
+              <li><span class="item-name">Arco traspalatino</span><span class="leader"></span><span class="price">30$</span></li>
+              <li><span class="item-name">Lip Bumper</span><span class="leader"></span><span class="price">40$</span></li>
+              <li><span class="item-name">Desoclusor acrílico</span><span class="leader"></span><span class="price">30$</span></li>
+              <li><span class="item-name">Pistas planas</span><span class="leader"></span><span class="price">120$</span></li>
+              <li><span class="item-name">Aditamentos adicionales</span><span class="leader"></span><span class="price">10$</span></li>
+            </ul>
+          </section>
 
+          <!-- 7. OTROS SERVICIOS (Verde Teal #2E7870) -->
+          <section class="price-box">
+            <div class="box-header">
+              <h3 class="category-title color-teal"><span class="dot teal"></span> Otros Servicios</h3>
+              <span class="category-sub color-teal">Servicios de Laboratorio</span>
+            </div>
+            <ul class="price-list">
+              <li><span class="item-name">Reparación acrílica</span><span class="leader"></span><span class="price">20$</span></li>
+              <li><span class="item-name">Vaciado de impresión</span><span class="leader"></span><span class="price">5$</span></li>
+              <li><span class="item-name">Duplicado de modelo</span><span class="leader"></span><span class="price">5$</span></li>
+              <li><span class="item-name">Encerado diagnóstico por unidad</span><span class="leader"></span><span class="price">10$</span></li>
+              <li><span class="item-name">Matriz de silicona para MockUp</span><span class="leader"></span><span class="price">20$</span></li>
+              <li><span class="item-name">Modelo Geller de yeso</span><span class="leader"></span><span class="price">20$</span></li>
+            </ul>
+          </section>
+
+          <!-- IMAGEN DE LA APARATOLOGÍA -->
+          <div class="image-box">
+            <img src="./images/v4086_17306.png" alt="Aparatología Dental" />
+          </div>
         </div>
 
       </div>
