@@ -26,6 +26,7 @@
       --switch-border: rgba(250, 250, 250, 0.12);
       --icon-inactive: rgba(250, 250, 250, 0.4);
       --icon-active: #FAFAFA;
+      --title-main-color: #FAFAFA; /* Títulos de la primera línea en modo oscuro */
     }
 
     html.light {
@@ -46,6 +47,7 @@
       --switch-border: rgba(36, 36, 36, 0.12);
       --icon-inactive: rgba(36, 36, 36, 0.4);
       --icon-active: #242424;
+      --title-main-color: #212529; /* Títulos de la primera línea en modo claro (#212529) */
     }
 
     * {
@@ -189,22 +191,24 @@
       color: var(--badge-text);
       border: 1px solid var(--badge-border);
     }
+    /* "LISTA DE PRECIOS" en Verde 700 (#2E7870) */
     .header-section h1 {
       font-family: 'Bona Nova SC', serif;
       font-size: 38px;
       font-weight: 400;
       letter-spacing: 0.5px;
-      color: var(--text-main);
+      color: #2E7870;
       text-transform: uppercase;
       margin-bottom: 4px;
     }
+    /* "TPD. ANDREA GALLEGOS" en Rosado (#BF47B1) */
     .header-section h2 {
       font-family: 'Montserrat', sans-serif;
       font-size: 13px;
       letter-spacing: 0.3em;
       text-transform: uppercase;
       font-weight: 600;
-      color: var(--text-sub);
+      color: #BF47B1;
     }
     .subtitle {
       font-family: 'Montserrat', sans-serif;
@@ -244,7 +248,7 @@
       margin-bottom: 12px;
     }
     
-    /* Título principal superior con su punto indicador */
+    /* Título principal superior (Primera línea) en color #212529 / variable */
     .category-title {
       font-family: 'Montserrat', sans-serif;
       font-size: 13px;
@@ -255,6 +259,7 @@
       gap: 8px;
       text-transform: uppercase;
       margin-bottom: 2px;
+      color: var(--title-main-color);
     }
     .dot {
       width: 6px;
@@ -265,7 +270,7 @@
     .dot.teal { background-color: #2E7870; }
     .dot.pink { background-color: #BF47B1; }
 
-    /* Subtítulo inferior */
+    /* Subtítulo inferior (Segunda línea) mantiene color identificativo */
     .category-sub {
       font-family: 'Bona Nova SC', serif;
       font-size: 11px;
@@ -428,15 +433,15 @@
 
         <!-- ================= COLUMNA IZQUIERDA ================= -->
         <div class="column">
-          <!-- 1. PROTECCIÓN Y BALANCE (Verde Teal #2E7870) -->
+          <!-- 1. PROTECCIÓN Y BALANCE -->
           <section class="price-box">
             <div class="box-header">
-              <h3 class="category-title color-teal"><span class="dot teal"></span> Protección y Balance</h3>
+              <h3 class="category-title"><span class="dot teal"></span> Protección y Balance</h3>
               <span class="category-sub color-teal">Biomecánico</span>
             </div>
             <ul class="price-list">
-              <li><span class="item-name">Férula tipo Michigan transparente</span><span class="leader"></span><span class="price">70$</span></li>
-              <li><span class="item-name">Férula tipo Michigan personalizada</span><span class="leader"></span><span class="price">75$</span></li>
+              <li><span class="item-name">Férula tipo Michigan transparente</span><span class="leader"></span><span class="price">95$</span></li>
+              <li><span class="item-name">Férula tipo Michigan personalizada</span><span class="leader"></span><span class="price">95$</span></li>
               <li><span class="item-name">Lámina termoformada de acetato</span><span class="leader"></span><span class="price">25$</span></li>
               <li><span class="item-name">Lámina termoformada blanda</span><span class="leader"></span><span class="price">30$</span></li>
               <li><span class="item-name">Protectores deportivos</span><span class="leader"></span><span class="price">35$</span></li>
@@ -444,10 +449,10 @@
             </ul>
           </section>
 
-          <!-- 2. ESTRUCTURAS (Rosado Pink #BF47B1) -->
+          <!-- 2. ESTRUCTURAS -->
           <section class="price-box">
             <div class="box-header">
-              <h3 class="category-title color-pink"><span class="dot pink"></span> Estructuras</h3>
+              <h3 class="category-title"><span class="dot pink"></span> Estructuras</h3>
               <span class="category-sub color-pink">De Precisión</span>
             </div>
             <ul class="price-list">
@@ -458,10 +463,10 @@
             </ul>
           </section>
 
-          <!-- 3. FLEXIBILIDAD Y CONFORT (Verde Teal #2E7870) -->
+          <!-- 3. FLEXIBILIDAD Y CONFORT -->
           <section class="price-box">
             <div class="box-header">
-              <h3 class="category-title color-teal"><span class="dot teal"></span> Flexibilidad</h3>
+              <h3 class="category-title"><span class="dot teal"></span> Flexibilidad</h3>
               <span class="category-sub color-teal">Y Confort</span>
             </div>
             <ul class="price-list">
@@ -472,10 +477,10 @@
             </ul>
           </section>
 
-          <!-- 4. FLUJO DIGITAL (Rosado Pink #BF47B1) -->
+          <!-- 4. FLUJO DIGITAL -->
           <section class="price-box">
             <div class="box-header">
-              <h3 class="category-title color-pink"><span class="dot pink"></span> Flujo Digital</h3>
+              <h3 class="category-title"><span class="dot pink"></span> Flujo Digital</h3>
               <span class="category-sub color-pink">Impresiones 3D</span>
             </div>
             <ul class="price-list">
@@ -487,11 +492,11 @@
             </ul>
           </section>
 
-          <!-- 5. REHABILITACIÓN (Verde Teal #2E7870) -->
+          <!-- 5. REHABILITACIÓN -->
           <section class="price-box">
             <div class="box-header">
-              <h3 class="category-title color-teal"><span class="dot teal"></span> Rehabilitación</h3>
-              <span class="category-sub color-teal">Protésica</span>
+              <h3 class="category-title"><span class="dot teal"></span> Rehabilitación</h3>
+              <span class="category-sub color-teal">Progresiva</span>
             </div>
             <ul class="price-list">
               <li><span class="item-name">Cubeta individual</span><span class="leader"></span><span class="price">25$</span></li>
@@ -508,10 +513,10 @@
 
         <!-- ================= COLUMNA DERECHA ================= -->
         <div class="column">
-          <!-- 6. APARATOLOGÍA (Rosado Pink #BF47B1) -->
+          <!-- 6. APARATOLOGÍA -->
           <section class="price-box">
             <div class="box-header">
-              <h3 class="category-title color-pink"><span class="dot pink"></span> Aparatología</h3>
+              <h3 class="category-title"><span class="dot pink"></span> Aparatología</h3>
               <span class="category-sub color-pink">Fija y Removible</span>
             </div>
             <ul class="price-list">
@@ -535,10 +540,10 @@
             </ul>
           </section>
 
-          <!-- 7. OTROS SERVICIOS (Verde Teal #2E7870) -->
+          <!-- 7. OTROS SERVICIOS -->
           <section class="price-box">
             <div class="box-header">
-              <h3 class="category-title color-teal"><span class="dot teal"></span> Otros Servicios</h3>
+              <h3 class="category-title"><span class="dot teal"></span> Otros Servicios</h3>
               <span class="category-sub color-teal">Servicios de Laboratorio</span>
             </div>
             <ul class="price-list">
@@ -551,7 +556,7 @@
             </ul>
           </section>
 
-          <!-- IMAGEN DE LA APARATOLOGÍA (Actualizada a Image.png) -->
+          <!-- IMAGEN DE LA APARATOLOGÍA -->
           <div class="image-box">
             <img src="./images/Image.png" alt="Aparatología Dental" />
           </div>
